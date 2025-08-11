@@ -24,10 +24,11 @@ RUN \
         python3=3.12.11-r0 \
         yq-go=4.46.1-r0 \
         git=2.49.1-r0 \
-    \
-    && pip install -r /tmp/requirements.txt \
-    \
-    && cd /usr/lib/python3.12/site-packages/ \
+
+RUN \ 
+    pip install -r /tmp/requirements.txt \
+RUN \
+    cd /usr/lib/python3.12/site-packages/ \
     && patch -p1 < /patches/force_recompile.patch \
     \
     && find /usr \
