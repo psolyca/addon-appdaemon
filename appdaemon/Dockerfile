@@ -25,9 +25,9 @@ RUN \
         yq-go=4.46.1-r0 \
         git=2.49.1-r0 \
     \ 
-    pip install -r /tmp/requirements.txt \
+    && pip install -r /tmp/requirements.txt \
     \
-    cd /usr/lib/python3.12/site-packages/ \
+    && cd /usr/lib/python3.12/site-packages/ \
     && patch -p1 < /patches/force_recompile.patch \
     \
     && find /usr \
