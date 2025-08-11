@@ -8,6 +8,7 @@ codenotary: codenotary@frenck.dev
 webui: http://[HOST]:[PORT:5050]
 arch:
   - amd64
+  - aarch64
 init: false
 homeassistant_api: true
 uart: true
