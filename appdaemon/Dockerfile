@@ -12,7 +12,7 @@ COPY requirements.txt /tmp/
 COPY rootfs/patches /patches
 
 # Setup base
-hadolint ignore=DL3003,DL3042
+# hadolint ignore=DL3003,DL3042
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r3 \
