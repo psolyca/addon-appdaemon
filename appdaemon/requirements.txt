@@ -1,1 +1,1 @@
-appdaemon @ git+https://github.com/psolyca/appdaemon@dev
+appdaemon @ git+http://github.com/psolyca/appdaemon
