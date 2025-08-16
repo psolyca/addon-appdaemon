@@ -11,6 +11,9 @@ COPY requirements.txt /tmp/
 # We need to copy in the patches need during build
 COPY rootfs/patches /patches
 
+# Copy AppDaemon
+COPY appdaemon /tmp/appdaemon
+
 # Setup base
 # hadolint ignore=DL3003,DL3042
 RUN \
@@ -22,7 +25,8 @@ RUN \
         py3-pip=25.1.1-r0 \
         py3-wheel=0.46.1-r0 \
         python3=3.12.11-r0 \
-        yq-go=4.46.1-r0 \
+        yq-go=4.46.1-r1 \
+        git=2.49.1-r0 \
     \
     && pip install -r /tmp/requirements.txt \
     \
